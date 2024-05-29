@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Suez+One&display=swap");
+
+:root {
+  --primary-text-color: #343c6a;
+  --secondary-text-color: #b1b1b1;
+  --text-focus-color: #1814f3;
+  --input-placeholder-color: #b1b1b1;
+  --gray-bg-color: #f5f7fa;
+  --main-bg-color: #f5f7fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* overflow-x: hidden; */
+}
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+ul li {
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: "sidebar header" "sidebar main";
+  grid-template-columns: 250px auto;
+  grid-template-rows: 85px auto;
+}
+/* ------------------ start sidebar ---------------------- */
+.sidebar-container {
+  grid-area: sidebar;
+  min-height: 100vh;
+  border-right: 1px solid #e6eff5;
+}
+.logo {
+  padding: 40px 30px;
+  gap: 10px;
+}
+.logo h2 {
+  color: var(--primary-text-color);
+  font-weight: 900;
+}
+
+.sidebar-list li {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  padding: 10px 30px;
+  color: var(--secondary-text-color);
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.sidebar-list li h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.sidebar-list li.active-item {
+  color: var(--text-focus-color);
+  position: relative;
+}
+.sidebar-list li.active-item::before {
+  content: "";
+  width: 12px;
+  height: 50px;
+  left: -5px;
+  top: -3px;
+  position: absolute;
+  background-color: var(--text-focus-color);
+  border-radius: 5px;
+}
+/* ------------------ end sidebar ---------------------- */
+
+/* ------------------ start header ---------------------- */
+header {
+  grid-area: header;
+  justify-content: space-between;
+  padding: 40px;
+  border-bottom: 1px solid #e6eff5;
+}
+header h2 {
+  color: var(--primary-text-color);
+  font-size: 25px;
+}
+.header-functions {
+  gap: 30px;
+}
+.search-bar input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+}
+.search-bar input::placeholder {
+  color: var(--input-placeholder-color);
+}
+.search-bar input:focus {
+  outline: none;
+}
+.search-bar {
+  background-color: var(--gray-bg-color);
+  border-radius: 410px;
+  padding: 10px 15px;
+  gap: 10px;
+}
+.setting {
+  background-color: var(--gray-bg-color);
+  padding: 10px;
+  border-radius: 50%;
+}
+.alerts {
+  background-color: var(--gray-bg-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.alerts img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.user-image {
+  width: 45px;
+  height: 45px;
+}
+.menu-icon {
+  display: none;
+}
+/* ------------------ end header ---------------------- */
+
+/* ------------------ start main ---------------------- */
+main {
+  grid-area: main;
+  background-color: var(--main-bg-color);
+  padding: 30px;
+  min-height: 100vh;
+}
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+}
+.progress-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+.progress-list .card {
+  gap: 15px;
+  width: 270px;
+}
+.progress-list .card p {
+  color: var(--secondary-text-color);
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+.progress-list .card img {
+  padding: 10px;
+  border-radius: 50%;
+}
+.progress-list .card:first-child img {
+  background-color: #dcfaf8;
+}
+.progress-list .card:nth-child(2) img {
+  background-color: #ffe0eb;
+}
+.progress-list .card:last-child img {
+  background-color: #e7edff;
+}
+
+.charts-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 35px;
+  margin-top: 25px;
+}
+.charts-container div {
+  width: 100%;
+}
+.card-heading {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: var(--primary-text-color);
+}
+
+.investment-trending-container {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.green-text {
+  color: #16dbaa;
+}
+.red-text {
+  color: #fe5c73;
+}
+.my-investment-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.my-investment-container .card {
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.my-investment-container .card p {
+  color: #718ebf;
+  font-size: 11px;
+  text-wrap: nowrap;
+  margin-top: 4px;
+}
+
+.my-investment-container .card img {
+  padding: 10px;
+  border-radius: 15px;
+  /* background-color: red; */
+}
+/* logos bg colors */
+.my-investment-container .card:nth-child(2) img {
+  background-color: #ffe0eb;
+}
+.my-investment-container .card:nth-child(3) img {
+  background-color: #e7edff;
+}
+.my-investment-container .card:nth-child(4) img {
+  background-color: #fff5d9;
+}
+
+.trending-stock {
+  width: 80%;
+}
+.trending-stock-table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+.trending-stock-table thead th {
+  font-size: 12px;
+  font-weight: 500;
+  color: #718ebf;
+  border-bottom: 1px solid #f4f5f7;
+  padding-bottom: 7px;
+}
+.trending-stock-table tr td {
+  padding: 14px 20px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* ------------------ end main ---------------------- */
+
+@media screen and (max-width: 1200px) {
+  .container {
+    grid-template-columns: 230px auto;
+  }
+  main {
+    padding: 20px;
+  }
+  .progress-list {
+    gap: 15px;
+  }
+  .progress-list .card {
+    width: 231px;
+  }
+  .header-functions {
+    gap: 20px;
+  }
+  .charts-container {
+    gap: 20px;
+  }
+  .my-investment-container .card,
+  .trending-stock .card {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+  .trending-stock-table tr td {
+    padding: 14px 10px;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+  .container {
+    grid-template-columns: 0px auto;
+    grid-template-rows: 140px auto;
+  }
+  .sidebar-container {
+    display: none;
+  }
+  .progress-list,
+  .charts-container,
+  .investment-trending-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  img.setting,
+  div.alerts {
+    display: none;
+  }
+  header {
+    position: relative;
+    margin-top: -50px;
+    padding: 20px;
+    gap: 20px;
+  }
+  header h2 {
+    font-size: 20px;
+  }
+  header .user-image {
+    width: 35px;
+    height: 35px;
+  }
+
+  .search-bar {
+    width: 95%;
+    position: absolute;
+    left: 0;
+    top: 135px;
+    margin: 0 20px;
+  }
+  .my-investment-container .env-value,
+  .my-investment-container .return-value {
+    display: none;
+  }
+  .progress-list .card,
+  .trending-stock {
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  .progress-list .card {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .charts-container .card {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+  .search-bar {
+    width: 90%;
+  }
+}

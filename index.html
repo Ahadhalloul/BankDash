@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BankDash</title>
+    <!-- -------------- main style ------------- -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- ------------------ start sidebar section ---------------------- -->
+      <div class="sidebar-container">
+        <div class="logo flex-row">
+          <img src="images/logo.svg" alt="dashbank logo" />
+          <h2>BankDash.</h2>
+        </div>
+        <ul class="sidebar-list">
+          <li>
+            <img src="icons/dashboard.svg" alt="" />
+            <h5>Dashboard</h5>
+          </li>
+          <li>
+            <img src="icons/transactions.svg" alt="" />
+            <h5>Transactions</h5>
+          </li>
+          <li>
+            <img src="icons/user.svg" alt="" />
+            <h5>Accounts</h5>
+          </li>
+          <li class="active-item">
+            <img src="icons/economic-investment 1.svg" alt="" />
+            <h5>Investments</h5>
+          </li>
+          <li>
+            <img src="icons/credit-card 1.svg" alt="" />
+            <h5>Credit Cards</h5>
+          </li>
+          <li>
+            <img src="icons/loan 1.svg" alt="" />
+            <h5>Loans</h5>
+          </li>
+          <li>
+            <img src="icons/service 1.svg" alt="" />
+            <h5>Services</h5>
+          </li>
+          <li>
+            <img src="icons/econometrics 1.svg" alt="" />
+            <h5>My Privileges</h5>
+          </li>
+          <li>
+            <img src="icons/settings solid 1.svg" alt="" />
+            <h5>Setting</h5>
+          </li>
+        </ul>
+      </div>
+      <!-- ------------------ end sidebar section ---------------------- -->
+      <!-- ------------------ start header ---------------------- -->
+      <header class="flex-row">
+        <img src="icons/menu.svg" alt="" class="menu-icon" />
+        <h2>Investments</h2>
+        <div class="flex-row header-functions">
+          <div class="search-bar flex-row">
+            <img src="icons/search.svg" alt="" />
+            <input type="text" placeholder="Search for something" />
+          </div>
+          <img class="setting" src="icons/settings 1.svg" alt="setting" />
+          <!-- the alert as div in case to add notification number above it  -->
+          <div class="alerts">
+            <img src="icons/notification-1.svg" alt="alerts" />
+          </div>
+          <img
+            class="user-image"
+            src="images/user-image.png"
+            alt="user image"
+          />
+        </div>
+      </header>
+      <!-- ------------------ end header ---------------------- -->
+
+      <!-- ------------------ start main ---------------------- -->
+      <main>
+        <div class="progress-list">
+          <div class="flex-row card">
+            <img src="icons/money-bag-of-dollars 1.svg" alt="" />
+            <div class="flex-col">
+              <p>Total Invested Amount</p>
+              <h4>$<span>150,000</span></h4>
+            </div>
+          </div>
+          <div class="flex-row card">
+            <img src="icons/pie-chart 1.svg" alt="" />
+            <div class="flex-col">
+              <p>Number of Investments</p>
+              <h4>1,250</h4>
+            </div>
+          </div>
+          <div class="flex-row card">
+            <img src="icons/repeat 1.svg" alt="" />
+            <div class="flex-col">
+              <p>Rate of Return</p>
+              <h4><span>+5.80</span>%</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="charts-container">
+          <div>
+            <h3 class="card-heading">Yearly Total Investment</h3>
+            <div class="card">
+              <canvas id="year-investment-chart"></canvas>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="card-heading">Monthly Revenue</h3>
+            <div class="card">
+              <canvas id="month-revenue-chart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="investment-trending-container">
+          <div class="my-investment-container">
+            <h3 class="card-heading">My Investment</h3>
+            <div class="card flex-row">
+              <img src="icons/apple.svg" alt="apple logo" />
+              <div class="flex-col">
+                <h4>Apple Store</h4>
+                <p>E-commerce, Marketplace</p>
+              </div>
+              <div class="flex-col env-value">
+                <h4>$<span>54,000</span></h4>
+                <p>Envestment Value</p>
+              </div>
+              <div class="flex-col">
+                <h4 class="green-text"><span>+16</span>%</h4>
+                <p class="return-value">Return Value</p>
+              </div>
+            </div>
+            <div class="card flex-row">
+              <img src="icons/google.svg" alt="google logo" />
+              <div class="flex-col">
+                <h4>Samsung Mobile</h4>
+                <p>E-commerce, Marketplace</p>
+              </div>
+              <div class="flex-col env-value">
+                <h4>$<span>25,300</span></h4>
+                <p>Envestment Value</p>
+              </div>
+              <div class="flex-col">
+                <h4 class="red-text"><span>-4</span>%</h4>
+                <p class="return-value">Return Value</p>
+              </div>
+            </div>
+            <div class="card flex-row">
+              <img src="icons/tesla.svg" alt="tesla logo" />
+              <div class="flex-col">
+                <h4>Tesla Motors</h4>
+                <p>Electric Vehicles</p>
+              </div>
+              <div class="flex-col env-value">
+                <h4>$<span>8,200</span></h4>
+                <p>Envestment Value</p>
+              </div>
+              <div class="flex-col">
+                <h4 class="green-text"><span>+25</span>%</h4>
+                <p class="return-value">Return Value</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="trending-stock">
+            <h3 class="card-heading">Trending Stock</h3>
+            <div class="card">
+              <table class="trending-stock-table">
+                <thead>
+                  <th>SL No</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th>Return</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>01.</td>
+                    <td>Trivago</td>
+                    <td>$<span>520</span></td>
+                    <td class="green-text"><span>+5</span>%</td>
+                  </tr>
+                  <tr>
+                    <td>02.</td>
+                    <td>Canon</td>
+                    <td>$<span>480</span></td>
+                    <td class="green-text"><span>+10</span>%</td>
+                  </tr>
+                  <tr>
+                    <td>03.</td>
+                    <td>Uber Food</td>
+                    <td>$<span>350</span></td>
+                    <td class="red-text"><span>-3</span>%</td>
+                  </tr>
+                  <tr>
+                    <td>04.</td>
+                    <td>Nokia</td>
+                    <td>$<span>940</span></td>
+                    <td class="green-text"><span>+2</span>%</td>
+                  </tr>
+                  <tr>
+                    <td>05.</td>
+                    <td>Ticktop</td>
+                    <td>$<span>670</span></td>
+                    <td class="red-text"><span>-12</span>%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- ------------------ end main ---------------------- -->
+    </div>
+
+    <!-- --------- main javascript -------- -->
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-------------start chart js  -------------->
+    <script>
+      const ctx1 = document.getElementById("year-investment-chart");
+      new Chart(ctx1, {
+        type: "line",
+        data: {
+          labels: ["2016", "2017", "2018", "2019", "2020", "2021"],
+          datasets: [
+            {
+              data: [5000, 25000, 15000, 35000, 20000, 29000],
+              borderWidth: 1,
+              borderColor: "#FCAA0B",
+              backgroundColor: "white",
+            },
+          ],
+        },
+
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              border: {
+                dash: [5, 5],
+                display: false,
+              },
+              grid: {
+                drawTicks: false,
+                display: true,
+              },
+              ticks: {
+                beginAtZero: true,
+
+                callback: function (value, index, ticks) {
+                  value = value.toString();
+                  value = value.split(/(?=(?:...)*$)/);
+                  value = value.join(",");
+                  return "$" + value;
+                },
+              },
+            },
+            x: {
+              grid: {
+                drawOnChartArea: false,
+                // drawTicks: false,
+              },
+              border: {
+                display: false,
+              },
+            },
+          },
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+        },
+      });
+
+      const ctx2 = document.getElementById("month-revenue-chart");
+      new Chart(ctx2, {
+        type: "line",
+        data: {
+          labels: ["2016", "2017", "2018", "2019", "2020", "2021"],
+          datasets: [
+            {
+              data: [10000, 20000, 15000, 35000, 20000, 29000],
+              borderWidth: 3,
+              borderColor: "#16DBCC",
+              pointRadius: 0,
+            },
+          ],
+        },
+
+        options: {
+          tension: 0.4,
+          scales: {
+            y: {
+              beginAtZero: true,
+              border: {
+                dash: [5, 5],
+                display: false,
+              },
+              grid: {
+                drawTicks: false,
+                display: true,
+              },
+              ticks: {
+                beginAtZero: true,
+
+                callback: function (value, index, ticks) {
+                  value = value.toString();
+                  value = value.split(/(?=(?:...)*$)/);
+                  value = value.join(",");
+                  return "$" + value;
+                },
+              },
+            },
+            x: {
+              grid: {
+                drawOnChartArea: false,
+                // drawTicks: false,
+              },
+              border: {
+                display: false,
+              },
+            },
+          },
+          plugins: {
+            legend: {
+              display: false,
+            },
+          },
+        },
+      });
+    </script>
+    <!-------------end chart js  -------------->
+  </body>
+</html>
