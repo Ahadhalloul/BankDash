@@ -301,9 +301,7 @@ main {
   .progress-list {
     gap: 15px;
   }
-  .progress-list .card {
-    width: 231px;
-  }
+
   .header-functions {
     gap: 20px;
   }
