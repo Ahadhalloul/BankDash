@@ -169,12 +169,11 @@ main {
 .progress-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 20px;
+  gap: 30px;
 }
 .progress-list .card {
   gap: 15px;
-  width: 270px;
+  width: 100%;
 }
 .progress-list .card .flex-col {
   width: 150px;
