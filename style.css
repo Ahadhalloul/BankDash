@@ -176,6 +176,10 @@ main {
   gap: 15px;
   width: 270px;
 }
+.progress-list .card .flex-col {
+  width: 150px;
+}
+
 .progress-list .card p {
   color: var(--secondary-text-color);
   margin-bottom: 5px;
@@ -248,7 +252,10 @@ main {
 .my-investment-container .card img {
   padding: 10px;
   border-radius: 15px;
-  /* background-color: red; */
+}
+.investment-content {
+  width: 100%;
+  justify-content: space-between;
 }
 /* logos bg colors */
 .my-investment-container .card:nth-child(2) img {
@@ -284,12 +291,13 @@ main {
 
 /* ------------------ end main ---------------------- */
 
+/* --------- start small screens -------- */
 @media screen and (max-width: 1200px) {
   .container {
-    grid-template-columns: 230px auto;
+    grid-template-columns: 220px auto;
   }
   main {
-    padding: 20px;
+    padding: 18px;
   }
   .progress-list {
     gap: 15px;
@@ -313,7 +321,7 @@ main {
   }
 }
 
-@media screen and (max-width: 1010px) {
+@media screen and (max-width: 995px) {
   .container {
     grid-template-columns: 0px auto;
     grid-template-rows: 140px auto;
@@ -367,6 +375,11 @@ main {
   .progress-list .card {
     justify-content: center;
   }
+
+  .my-investment-container .card {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -377,4 +390,9 @@ main {
   .search-bar {
     width: 90%;
   }
+  .my-investment-container .card {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
+/* --------- end small screens -------- */
