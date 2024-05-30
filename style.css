@@ -257,13 +257,13 @@ main {
   justify-content: space-between;
 }
 /* logos bg colors */
-.my-investment-container .card:nth-child(2) img {
+.logo-pink-bg {
   background-color: #ffe0eb;
 }
-.my-investment-container .card:nth-child(3) img {
+.logo-blue-bg {
   background-color: #e7edff;
 }
-.my-investment-container .card:nth-child(4) img {
+.logo-orange-bg {
   background-color: #fff5d9;
 }
 
